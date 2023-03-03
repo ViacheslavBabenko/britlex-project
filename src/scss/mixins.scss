@@ -1,0 +1,15 @@
+@mixin list-reset {
+    padding-left: 0;
+    list-style: none;
+}
+
+@mixin flex ($vertical-location: center, $horizontal-location: center) {
+    display: flex;
+    align-items: $vertical-location;
+    justify-content: $horizontal-location;
+}
+
+@mixin text-size ($size, $height) {
+    font-size: $size;
+    line-height: $height;
+}

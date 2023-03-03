@@ -1,0 +1,17 @@
+html {
+    scroll-behavior: smooth;
+}
+
+.body-page {
+    font-family: $main-font;
+    min-width: 320px;
+    color: $default-color;
+}
+
+.container{
+    max-width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 30px;
+    padding-right: 30px;
+}
