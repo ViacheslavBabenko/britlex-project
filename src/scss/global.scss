@@ -6,6 +6,10 @@ html {
     font-family: $main-font;
     min-width: 320px;
     color: $default-color;
+
+    &__no-scroll {
+        overflow: hidden;
+    }
 }
 
 .container{
