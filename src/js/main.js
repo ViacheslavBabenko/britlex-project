@@ -30,3 +30,16 @@ burgerIcon.addEventListener("click", () =>{
     body.classList.toggle("body-page__no-scroll")
 
 })
+
+
+window.addEventListener("resize", (event) => {
+  if (event.target.screen.availWidth > 993) {
+      menu.classList.remove('header-page__menu--active');
+      bugerIconLines.forEach((element) => {
+          element.classList.remove("burger-icon__line--active");
+      })
+  }
+  if (!menu.classList.contains("header-page__menu--active")) {
+  body.classList.remove("body-page__no-scroll");
+}
+})

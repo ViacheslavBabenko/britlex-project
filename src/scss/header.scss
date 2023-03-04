@@ -13,11 +13,32 @@
             padding-bottom: 20px;
         }
     }
+
+    &__button {
+        display: none;
+
+        @media (min-width: 993px) {
+           display: block;
+        }
+        @media (min-width: 1200px) {
+           padding: 15px 55px;
+           @include text-size (24px, 36px);
+        }
+
+           &:hover {
+            transform: scale(1.1);
+            transition: .2s linear;
+           }
+    }
 }
 
 
 .header-page__navbar {
-    position: relative
+    position: relative;
+
+    @media (min-width: 993px) {
+        @include flex(center, space-between);
+    }
 }
 .logo {
     @include text-size (24px, 26px);
@@ -35,7 +56,7 @@
 .burger-icon {
     position: absolute;
     width: 30px;
-    height: 19px;
+    height: 25px;
     right: 0;
     top: 2px;
     cursor: pointer;
@@ -98,26 +119,50 @@
     &--active {
         @include flex(flex-start);
         flex-direction: column;
-        gap: 20px;
+        gap: 40px;
         transition: .3s linear;
         top: 0;
         left: 0;
         height: 100%;
         width: 100%;
-      padding-left: 50px;
+        padding-left: 50px;
         background-color: rgba(143, 149, 165, 0.9);
         min-width: 320px;
         @include text-size (26px, 48px);
+
+        @media (min-width: 768px) {
+            padding-left: 100px;
+        }
+    }
+
+    @media (min-width: 993px) {
+        position: static;
+        @include flex;
+        gap: 30px;
     }
 }
 
+
 .header-page__menu--link {
-    @include text-size (16px, 24px);
+    @include text-size (20px, 28px);
     color: $default-color;
     text-transform: capitalize;
     font-weight: 500;
+    display: block;
+    border-bottom: 2px solid transparent;
+
+    @media (min-width: 768px) {
+        @include text-size (26px, 38px);
+    }
 
     &:hover {
         border-bottom: 2px solid #000;
+        transform: scale(1.2);
+        transition: .2s linear;
     }
+
+    @media (min-width: 993px) {
+        @include text-size (16px, 24px);
+    }
+
 }

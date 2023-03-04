@@ -19,3 +19,13 @@ html {
     padding-left: 30px;
     padding-right: 30px;
 }
+
+.button {
+    @include text-size (18px,27px);
+    color: $default-color;
+    background-color: transparent;
+    padding: 12px 40px;
+    border-radius: 5px;
+    border: 2px solid $default-color;
+    cursor: pointer;
+}
