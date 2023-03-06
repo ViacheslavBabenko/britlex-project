@@ -1,0 +1,156 @@
+.intro {
+    padding-top: 100px;
+    padding-bottom: 50px;
+
+    @media (min-width: 575px) {
+        padding-top: 90px;
+    }
+}
+
+.intro__container {
+    @include flex;
+    flex-direction: column;
+    text-align: center;
+
+    @media (min-width: 768px) {
+        flex-direction: row-reverse;
+        justify-content: space-around;
+        text-align: left;
+    }
+}
+
+.new-row {
+    display: none;
+    @media (min-width: 768px) {
+       display: inline;
+    }
+}
+
+.intro__img {
+  
+    @media (min-width: 768px) {
+        min-width: 350px;
+    }
+
+    @media (min-width: 993px) {
+      min-width: 460px;
+    }
+
+    @media (min-width: 1200px) {
+        min-width: 660px;
+      }
+}
+
+.intro__description {
+
+    @media (min-width: 768px) {
+        max-width:340px;
+        position: relative;
+    }
+
+    @media (min-width: 993px) {
+        max-width:425px;
+    }
+
+    @media (min-width: 1200px) {
+        max-width:630px;
+    }
+    
+}
+
+.light-img {
+    display: none;
+    @media (min-width: 768px) {
+        display: block;
+        position: absolute;
+        top: 85px;
+        left: 207px;
+    }
+
+    @media (min-width: 993px) {
+        width: 58px;
+        height: 58px;
+        top: 120px;
+        left: 285px;
+    }
+    @media (min-width: 1200px) {
+        width: 85px;
+        height: 85px;
+        top: 141px;
+        left: 374px;
+    }
+}
+
+.intro__title {
+    @include text-size (24px, 36px);
+    font-weight: 600;
+    margin-top: 15px;
+    margin-bottom: 20px;
+
+    @media (min-width: 575px) {
+        @include text-size (34px, 45px);
+        margin-bottom: 25px;
+    }
+
+    @media (min-width: 993px) {
+        @include text-size (48px, 64px);
+    }
+
+    @media (min-width: 1200px) {
+        @include text-size (64px, 80px);
+    }
+}
+
+.intro__subtitle {
+    margin-top: 0;
+    margin-bottom: 35px;
+    @include text-size (12px, 21px);
+    color: $secondary-color;
+
+    @media (min-width: 575px) {
+        @include text-size (16px, 24px);
+        margin-bottom: 60px;
+    }
+
+    @media (min-width: 768px) {
+        margin-bottom: 30px;
+    }
+
+    @media (min-width: 993px) {
+        @include text-size (20px, 30px);
+    }
+
+    @media (min-width: 1200px) {
+        @include text-size (24px, 36px);
+    }
+}
+
+.intro__btn {
+    padding: 18px 95px;
+    display: inline-block;
+
+    @media (min-width: 575px) {
+        @include text-size (18px, 27px);
+        padding-top: 24px;
+        padding-bottom: 24px;
+    }
+
+    &:hover {
+        @include btns-hover;
+    }
+
+    @media (min-width: 768px) {
+        padding: 20px 65px;
+    }
+
+    @media (min-width: 993px) {
+        padding: 22px 80px;
+        @include text-size (24px, 36px);
+    }
+
+    @media (min-width: 1200px) {
+        padding: 32px 115px;
+        @include text-size (36px, 54px);
+    }
+}
+

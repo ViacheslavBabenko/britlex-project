@@ -20,3 +20,9 @@
     border-bottom-left-radius:$bl;
     border-bottom-right-radius:$br;
 }
+
+@mixin btns-hover {
+        transform: scale(1.1);
+        transition: .2s linear;
+
+}

@@ -16,8 +16,13 @@ html {
     max-width: 1200px;
     margin-right: auto;
     margin-left: auto;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    @media (min-width: 575px) {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
 }
 
 .button {
@@ -28,4 +33,12 @@ html {
     border-radius: 5px;
     border: 2px solid $default-color;
     cursor: pointer;
+}
+
+.button--black {
+    background-color: $buttons-color;
+    border: none;
+    color: white;
+    @include text-size (16px,24px);
+    font-weight: 600;
 }
