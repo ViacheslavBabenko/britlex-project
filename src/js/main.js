@@ -4,7 +4,7 @@ const header = document.querySelector(".header-page");
 
 window.addEventListener("scroll", () => {
   let scrollDistance = window.scrollY;
-  if (scrollDistance >= 140) {
+  if (scrollDistance >= 75) {
     header.classList.add("header-page--fixed");
 
   } else header.classList.remove("header-page--fixed");
@@ -31,6 +31,22 @@ burgerIcon.addEventListener("click", () =>{
 
 })
 
+document.addEventListener("click", (event) => {
+  let target = event.target;
+  let headerMenu = target == menu || menu.contains(target);
+  let burger = target == burgerIcon || target.closest(".burger-icon");
+  let headerMenuActive = target.classList.contains('header-page__menu--link');
+
+  if (headerMenu && !burger && !headerMenuActive && window.screen.availWidth < 993) {
+      menu.classList.toggle("header-page__menu--active");
+      changeBurgerIcon ();
+      body.classList.toggle("body-page__no-scroll");
+  } else if (headerMenuActive && window.screen.availWidth < 993){
+      menu.classList.remove("header-page__menu--active");
+      changeBurgerIcon ();
+      body.classList.remove("body-page__no-scroll");
+  }
+})
 
 window.addEventListener("resize", (event) => {
   if (event.target.screen.availWidth > 993) {

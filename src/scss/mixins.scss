@@ -20,3 +20,11 @@
     border-bottom-left-radius:$bl;
     border-bottom-right-radius:$br;
 }
+
+@mixin btns-hover {
+        background-color: white;
+        border: 2px solid $buttons-color;
+        color: $buttons-color;
+        transition: .2s linear;
+
+}

@@ -2,11 +2,13 @@
     padding-top: 35px;
     position: fixed;
     width: 100%;
+    z-index: 3;
 
     &--fixed {
-        padding-top: 10px;
-        padding-bottom: 10px;
-        background-color: rgba(4, 4, 4, 0.9);
+        padding-top: 15px;
+        padding-bottom: 15px;
+        background-color: rgb(255, 255, 255);
+        border-bottom: 2px solid $default-color;
 
         @media (min-width: 993px) {
             padding-top: 20px;
@@ -16,6 +18,13 @@
 
     &__button {
         display: none;
+        @include text-size (18px,27px);
+        padding: 12px 40px;
+        color: $default-color;
+        background-color: transparent;
+        border-radius: 5px;
+        border: 2px solid $default-color;
+        cursor: pointer;
 
         @media (min-width: 993px) {
            display: block;
@@ -27,7 +36,7 @@
 
            &:hover {
             transform: scale(1.1);
-            transition: .2s linear;
+             transition: .3s linear;
            }
     }
 }
@@ -50,6 +59,11 @@
     &__gray {
         color: $secondary-color;
     }
+
+    &:hover {
+       transform: scale(1.1);
+       transition: .3s linear;
+       }
 }
 
 
@@ -60,7 +74,7 @@
     right: 0;
     top: 2px;
     cursor: pointer;
-    z-index: 3;
+    z-index: 4;
 
     @media (min-width: 993px) {
         display: none;
@@ -77,6 +91,7 @@
 	transform: translate(-50%, -50%);
     transition: 0.2s linear;
     @include rounding;
+
 
     &:nth-of-type(1) {
         top: calc(50% - 7px);
@@ -114,6 +129,7 @@
     margin-bottom: 0;
     position: fixed;
     top: -100%;
+    z-index: 3;
 
     
     &--active {
@@ -126,7 +142,7 @@
         height: 100%;
         width: 100%;
         padding-left: 50px;
-        background-color: rgba(143, 149, 165, 0.9);
+        background-color: rgba(143, 149, 165, 0.97);
         min-width: 320px;
         @include text-size (26px, 48px);
 
