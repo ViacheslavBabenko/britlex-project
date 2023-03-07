@@ -25,20 +25,11 @@ html {
     }
 }
 
-.button {
-    @include text-size (18px,27px);
-    color: $default-color;
-    background-color: transparent;
-    padding: 12px 40px;
-    border-radius: 5px;
-    border: 2px solid $default-color;
-    cursor: pointer;
-}
-
 .button--black {
     background-color: $buttons-color;
-    border: none;
+    border: 2px solid transparent;
     color: white;
-    @include text-size (16px,24px);
     font-weight: 600;
+     border-radius: 5px;
+     cursor: pointer;
 }

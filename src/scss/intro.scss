@@ -128,6 +128,7 @@
 .intro__btn {
     padding: 18px 95px;
     display: inline-block;
+    @include text-size (16px,24px);
 
     @media (min-width: 575px) {
         @include text-size (18px, 27px);
@@ -137,6 +138,7 @@
 
     &:hover {
         @include btns-hover;
+
     }
 
     @media (min-width: 768px) {

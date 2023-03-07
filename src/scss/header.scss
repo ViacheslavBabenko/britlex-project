@@ -18,6 +18,13 @@
 
     &__button {
         display: none;
+        @include text-size (18px,27px);
+        padding: 12px 40px;
+        color: $default-color;
+        background-color: transparent;
+        border-radius: 5px;
+        border: 2px solid $default-color;
+        cursor: pointer;
 
         @media (min-width: 993px) {
            display: block;
@@ -28,7 +35,8 @@
         }
 
            &:hover {
-            @include btns-hover;
+            transform: scale(1.1);
+             transition: .3s linear;
            }
     }
 }
@@ -53,7 +61,8 @@
     }
 
     &:hover {
-       @include btns-hover;
+       transform: scale(1.1);
+       transition: .3s linear;
        }
 }
 
