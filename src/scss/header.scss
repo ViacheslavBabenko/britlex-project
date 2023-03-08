@@ -35,8 +35,9 @@
         }
 
            &:hover {
-            transform: scale(1.1);
              transition: .3s linear;
+             color: white;
+             background-color: $buttons-color;
            }
     }
 }
@@ -64,6 +65,10 @@
        transform: scale(1.1);
        transition: .3s linear;
        }
+
+       @media (min-width: 993px) {
+        @include text-size (36px, 54px);
+    }
 }
 
 
@@ -179,6 +184,10 @@
 
     @media (min-width: 993px) {
         @include text-size (16px, 24px);
+    }
+
+    @media (min-width: 1200px) {
+        @include text-size (20px, 30px);
     }
 
 }
