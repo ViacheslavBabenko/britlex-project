@@ -43,6 +43,7 @@ html {
     color: $default-color;
     @include text-size (24px, 80px);
     font-weight: 600; text-align: center;
+    text-transform: capitalize;
 
     @media (min-width : 575px) {
         @include text-size (30px, 80px);
