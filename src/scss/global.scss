@@ -13,7 +13,7 @@ html {
 }
 
 .container{
-    max-width: 1200px;
+    max-width: 1400px;
     margin-right: auto;
     margin-left: auto;
     padding-left: 15px;
@@ -40,9 +40,11 @@ html {
 }
 
 .section-title {
+    margin-top: 0;
     color: $default-color;
     @include text-size (24px, 80px);
     font-weight: 600; text-align: center;
+    text-transform: capitalize;
 
     @media (min-width : 575px) {
         @include text-size (30px, 80px);

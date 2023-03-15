@@ -61,11 +61,6 @@
         color: $secondary-color;
     }
 
-    &:hover {
-       transform: scale(1.1);
-       transition: .3s linear;
-       }
-
        @media (min-width: 993px) {
         @include text-size (36px, 54px);
     }
