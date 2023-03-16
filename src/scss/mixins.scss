@@ -1,0 +1,30 @@
+@mixin list-reset {
+    padding-left: 0;
+    list-style: none;
+}
+
+@mixin flex ($vertical-location: center, $horizontal-location: center) {
+    display: flex;
+    align-items: $vertical-location;
+    justify-content: $horizontal-location;
+}
+
+@mixin text-size ($size, $height) {
+    font-size: $size;
+    line-height: $height;
+}
+
+@mixin rounding($tl: 20px,$tr: 20px,$bl: 20px,$br: 20px) {
+    border-top-left-radius:$tl;
+    border-top-right-radius:$tr;
+    border-bottom-left-radius:$bl;
+    border-bottom-right-radius:$br;
+}
+
+@mixin btns-hover {
+        background-color: white;
+        border: 2px solid $buttons-color;
+        color: $buttons-color;
+        transition: .2s linear;
+
+}

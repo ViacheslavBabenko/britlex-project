@@ -1,0 +1,181 @@
+.pricing {
+    padding-bottom: 70px;
+
+    @media (min-width : 993px) {
+        padding-bottom: 120px;
+      }
+
+    @media (min-width : 1200px) {
+        padding-bottom: 200px;
+      }
+}
+
+.pricing__container {
+    @include flex;
+    flex-direction: column;
+    text-align: center;
+
+    @media (min-width : 768px) {
+      text-align: left;
+    }
+}
+
+.pricing__title {
+    margin-bottom: 40px;
+}
+
+.pricing-list {
+    @include list-reset;
+    margin-top: 0;
+    margin-bottom: 0;
+    @include flex;
+    flex-direction: column;
+    gap: 60px;
+
+    @media (min-width : 768px) {
+        flex-direction: row;
+       align-items: stretch;
+        gap: 50px;
+    }
+}
+
+.pricing-list__item {
+    @include flex;
+    flex-direction: column;
+
+    @media (min-width : 768px) {
+        min-height: 375px;
+      align-items: flex-start;
+    }
+}
+.pricing-list__img {
+    margin-bottom: 20px;
+    padding-bottom: 58%;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+
+    img {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        object-fit: contain;
+        top: 0;
+        left: 0;
+    }
+
+}
+
+.pricing-list__body {
+    @include flex;
+    flex-direction: column;
+    height: 100%;
+
+    @media (min-width : 768px) {
+        align-items: flex-start;
+    }
+}
+.pricing-list__title {
+    @include text-size(16px, 28px);
+    font-weight: 600;
+    margin-top: 25px;
+    margin-bottom: 15px;
+
+    @media (min-width : 575px) {
+        @include text-size(24px, 28px);
+        margin-bottom: 25px;
+    }
+    @media (min-width : 768px) {
+        @include text-size(20px, 28px);
+        margin-bottom: 15px;
+        margin-top: 0;
+    }
+    @media (min-width: 993px) {
+        @include text-size(22px, 34px);
+    }
+    @media (min-width : 1200px) {
+        @include text-size(30px, 48px);
+        margin-bottom: 20px;
+    }
+}
+
+.pricing-list__discription {
+    @include text-size(13px, 20px);
+    margin-top: 0;
+    margin-bottom: 30px;
+    color: $secondary-color;
+    max-width: 400px;
+
+    @media (min-width : 575px) {
+        @include text-size(14px, 21px);
+    }
+
+    @media (min-width : 768px) {
+        @include text-size(14px, 21px);
+        margin-bottom: 0;
+    }
+
+    @media (min-width : 993px) {
+        @include text-size(16px, 24px);
+        margin-bottom: 25px;
+    }
+
+    @media (min-width : 1200px) {
+        @include text-size(20px, 30px);
+    }
+}
+
+.pricing-list__price {
+    @include text-size(18px, 27px);
+    margin-top: auto;
+    margin-bottom: 0;
+    background-color: #EEEEEE;
+    border-radius: 5px;
+    display: inline-block;
+    padding: 5px 10px;
+    
+    
+
+    
+    @media (min-width : 575px) {
+        @include text-size(24px, 36px);
+        padding: 5px 20px;
+    }
+
+    @media (min-width : 768px) {
+        @include text-size(22px, 33px);
+      width: 100%;
+      text-align: center;
+    }
+
+    @media (min-width : 993px) {
+        @include text-size(24px, 36px);
+       width: 80%;
+    }
+
+    @media (min-width : 1200px) {
+        @include text-size(30px, 45px);
+       
+    }
+
+
+    &::after {
+        content: "per month";
+        @include text-size(14px, 21px);
+        color: #546269;
+        margin-left: 5px;
+       position: relative;
+       bottom: 3px;
+
+    @media (min-width : 575px) {
+        @include text-size(16px, 24px);
+       
+    }
+
+    @media (min-width : 1200px) {
+        @include text-size(18px, 27px);
+    }
+    }
+
+
+}

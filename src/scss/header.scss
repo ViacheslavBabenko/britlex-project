@@ -1,0 +1,191 @@
+.header-page {
+    padding-top: 35px;
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+
+    &--fixed {
+        padding-top: 15px;
+        padding-bottom: 15px;
+        background-color: rgb(255, 255, 255);
+        border-bottom: 2px solid $default-color;
+
+        @media (min-width: 993px) {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+    }
+
+    &__button {
+        display: none;
+        @include text-size (18px,27px);
+        padding: 12px 40px;
+        color: $default-color;
+        background-color: transparent;
+        border-radius: 5px;
+        border: 2px solid $default-color;
+        cursor: pointer;
+
+        @media (min-width: 993px) {
+           display: block;
+        }
+        @media (min-width: 1200px) {
+           padding: 15px 55px;
+           @include text-size (24px, 36px);
+        }
+
+           &:hover {
+             transition: .3s linear;
+             color: white;
+             background-color: $buttons-color;
+           }
+    }
+}
+
+
+.header-page__navbar {
+    position: relative;
+
+    @media (min-width: 993px) {
+        @include flex(center, space-between);
+    }
+}
+.logo {
+    @include text-size (24px, 26px);
+    color: $default-color;
+    font-weight: 400;
+    margin-top: 0;
+    margin-bottom: 0;
+
+    &__gray {
+        color: $secondary-color;
+    }
+    @media (min-width : 575px) {
+        @include text-size (30px, 45px);
+      }
+      
+       @media (min-width: 993px) {
+        @include text-size (36px, 54px);
+    }
+}
+
+
+.burger-icon {
+    position: absolute;
+    width: 30px;
+    height: 25px;
+    right: 0;
+    top: 2px;
+    cursor: pointer;
+    z-index: 4;
+
+    @media (min-width: 993px) {
+        display: none;
+    }
+}
+
+.burger-icon__line {
+    background-color: #39515E;
+    width: 30px;
+    height: 3px;
+    position: absolute;
+    top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+    transition: 0.2s linear;
+    @include rounding;
+
+
+    &:nth-of-type(1) {
+        top: calc(50% - 7px);
+ 
+    }
+    &:nth-of-type(3) {
+        top: calc(50% + 7px);
+        width: 60%;
+        left: 9px;
+    }
+}
+
+.burger-icon__line--active {
+
+    &:nth-of-type(2) {
+        display: none;
+      }
+      &:nth-of-type(1) {
+    
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 0%) rotate(45deg);  
+      }
+      &:nth-of-type(3) {
+        top: 50%;
+        transform: translate(-50%, 0%) rotate(-45deg); 
+        width: 100%;
+        left: 14px;
+      }
+}
+
+.header-page__menu {
+    @include list-reset;
+    margin-top: 0;
+    margin-bottom: 0;
+    position: fixed;
+    top: -100%;
+    z-index: 3;
+
+    
+    &--active {
+        @include flex(flex-start);
+        flex-direction: column;
+        gap: 40px;
+        transition: .3s linear;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        padding-left: 50px;
+        background-color: rgba(143, 149, 165, 0.97);
+        min-width: 320px;
+        @include text-size (26px, 48px);
+
+        @media (min-width: 768px) {
+            padding-left: 100px;
+        }
+    }
+
+    @media (min-width: 993px) {
+        position: static;
+        @include flex;
+        gap: 30px;
+    }
+}
+
+
+.header-page__menu--link {
+    @include text-size (20px, 28px);
+    color: $default-color;
+    text-transform: capitalize;
+    font-weight: 500;
+    display: block;
+    border-bottom: 2px solid transparent;
+
+    @media (min-width: 768px) {
+        @include text-size (26px, 38px);
+    }
+
+    &:hover {
+        border-bottom: 2px solid #000;
+        transform: scale(1.2);
+        transition: .2s linear;
+    }
+
+    @media (min-width: 993px) {
+        @include text-size (16px, 24px);
+    }
+
+    @media (min-width: 1200px) {
+        @include text-size (20px, 30px);
+    }
+
+}
