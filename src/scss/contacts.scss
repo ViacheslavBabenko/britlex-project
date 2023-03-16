@@ -1,5 +1,8 @@
 .contacts {
     padding-bottom: 55px;
+    @media (min-width : 575px) {
+       padding-bottom: 140px;
+    }
 }
 
 .contacts__container {
@@ -50,7 +53,6 @@
 
     @media (min-width : 1200px) {
         top: 95px;
-    
     }
 
 }

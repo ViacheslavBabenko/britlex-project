@@ -60,7 +60,10 @@
     &__gray {
         color: $secondary-color;
     }
-
+    @media (min-width : 575px) {
+        @include text-size (30px, 45px);
+      }
+      
        @media (min-width: 993px) {
         @include text-size (36px, 54px);
     }
