@@ -1,0 +1,99 @@
+.footer-page {
+ padding-bottom: 45px;
+
+ @media (min-width : 768px) {
+    margin-top: 15%;
+  }
+    
+}
+
+.footer__container {
+    @include flex;
+    flex-direction: column;
+    gap: 15px;
+    position: relative;
+    padding-top: 25px;
+
+    &::before {
+        content: "";
+        border-top: 1px solid $secondary-color;
+        width: calc(100% - 30px);
+        position: absolute;
+        top: 0;
+        left: 15px;
+
+        @media (min-width: 575px) {
+            width: calc(100% - 60px);
+            left: 30px;
+        }
+
+    }
+
+    @media (min-width : 575px) {
+        flex-direction: row;
+        justify-content: space-between;
+        padding-top: 20px;
+      }
+}
+
+.logo--footer {
+    @media (min-width : 575px) {
+        @include text-size (30px, 45px);
+      }
+      @media (min-width: 993px) {
+        @include text-size (36px, 54px);
+    }
+}
+
+.footer-list {
+    @include list-reset;
+    @include flex;
+    margin-top: 0;
+    margin-bottom: 0;
+  gap: 3px;
+
+}
+
+.footer-list__item {
+    &:nth-of-type(n+2)::before {
+        display: inline-block;
+        content: "";
+        height: 3px;
+        width: 3px;
+        background-color: $secondary-color;
+        border-radius: 50%;
+        margin-bottom: 2px;
+
+        @media (min-width : 993px) {
+            height: 5px;
+            width: 5px;
+           
+        }
+
+        @media (min-width : 1200px) {
+            margin-bottom: 4px;
+        }
+    }
+}
+
+.footer-list__link {
+    @include text-size (10px, 16px);
+    font-weight: 500;
+    color: $secondary-color;
+
+    @media (min-width : 340px) {
+        font-size: 11px;
+      }
+      @media (min-width : 575px) {
+        @include text-size (12px, 18px);
+      }
+      @media (min-width : 768px) {
+        @include text-size (13px, 20px);
+      }
+      @media (min-width : 993px) {
+        @include text-size (16px, 24px);
+      }
+      @media (min-width : 1200px) {
+        @include text-size (24px, 36px);
+      }
+}

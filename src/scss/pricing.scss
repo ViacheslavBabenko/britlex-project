@@ -63,12 +63,17 @@
         top: 0;
         left: 0;
     }
+
 }
 
 .pricing-list__body {
-    display: flex;
+    @include flex;
     flex-direction: column;
     height: 100%;
+
+    @media (min-width : 768px) {
+        align-items: flex-start;
+    }
 }
 .pricing-list__title {
     @include text-size(16px, 28px);
@@ -128,10 +133,13 @@
     border-radius: 5px;
     display: inline-block;
     padding: 5px 10px;
+    
+    
 
     
     @media (min-width : 575px) {
         @include text-size(24px, 36px);
+        padding: 5px 20px;
     }
 
     @media (min-width : 768px) {
@@ -142,12 +150,12 @@
 
     @media (min-width : 993px) {
         @include text-size(24px, 36px);
-       
+       width: 80%;
     }
 
     @media (min-width : 1200px) {
         @include text-size(30px, 45px);
-        width: 70%;
+       
     }
 
 
